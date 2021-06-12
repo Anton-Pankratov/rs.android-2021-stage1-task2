@@ -4,6 +4,8 @@ class Abbreviation {
 
     // TODO: Complete the following function
     fun abbreviationFromA(a: String, b: String): String {
-        throw NotImplementedError("Not implemented")
+        return if (a.toUpperCase().toSet()
+                .intersect(b.asIterable()).toCharArray()
+                .contentEquals(b.toCharArray())) "YES" else "NO"
     }
 }
